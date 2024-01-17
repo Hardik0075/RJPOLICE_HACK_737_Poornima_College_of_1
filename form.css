@@ -1,0 +1,71 @@
+body{
+    background-color: pink;
+}
+
+form {
+    width: 400px;
+    margin: 10rem 28rem;
+    background-color: rgb(238, 215, 237);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333; /* Label text color */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Input border color */
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Transition for border color change */
+}
+
+/* dropdown */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50; /* Highlight border color on focus */
+}
+
+button {
+    background-color: #4CAF50; /* Button background color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color change */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker background color on hover */
+}
+
+/* Simple item animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease; /* Apply fade-in animation to elements with the 'fade-in' class */
+}

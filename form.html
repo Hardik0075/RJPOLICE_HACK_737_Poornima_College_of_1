@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="bot-icon.css">
+  <script defer src="script.js"></script>
+  <title>Bhav-vyakt</title>
+</head>
+
+<body>
+  <header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+        <span class="gradient skew">
+          <div class="logo un-skew">
+            <a style="text-decoration: none;padding-bottom: 1rem;" href="#home">
+              <h2 style="text-decoration: none;margin-top:0 ;color: #fff;">Bhav-Vyakt</h2>
+            </a>
+          </div>
+        </span>
+        <button id="menu" class="btn-nav">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+      <div class="nav right">
+        <a href="#home" class="nav-link active">
+          <span class="nav-link-span">
+            <span class="u-nav">Feedback</span>
+          </span>
+        </a>
+        <a href="/chatbot" class="nav-link">
+          <span class="nav-link-span">
+            <span class="u-nav"> Help</span>
+          </span>
+        </a>
+        <a href="/feed" class="nav-link">
+          <span class="nav-link-span">
+            <span class="u-nav">Feeds</span>
+          </span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <h1 style="margin-top:7rem;margin-left:35rem ;">ADD REVIEW</h1>
+  <main>
+    <form id="feedbackForm" style="margin-top: 0rem;" action="/post" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="contact" >Contact:</label>
+        <input type="text" style="background-color: #fff;" id="contact" name="contact" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="thana">Thana:</label>
+        <select id="thana" name="thana">
+          <option value="sanganer">Choose Your Thana</option>
+            <option value="sanganer">Sanganer Thana</option>
+            <option value="murlipura">Murlipura Thana</option>
+            <option value="sitapura">Sitapura Thana</option>
+            <option value="vidhydharNagar">Vidhydhar Nagar Thana</option>
+        </select>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="">Enter Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="issue">Issue:</label>
+        <input type="text" id="issue" name="issue" required>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+  </main>
+  script(src="form.js") 
+</body>
+
+</html>

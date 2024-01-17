@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis Form</title>
+</head>
+<body>
+
+  <h1>Sentiment Analysis</h1>
+
+  <form id="sentimentForm">
+    <label for="inputText">Enter Text:</label>
+    <textarea id="inputText" name="inputText" rows="4" cols="50"></textarea>
+    <br>
+    <button type="submit">Analyze Sentiment</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('sentimentForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+    const inputText = document.getElementById('inputText').value;
+
+    const url = `https://googles-bert-sentiment-analysis.p.rapidapi.com/sentiment?text=${encodeURIComponent(inputText)}&lang=en`;
+
+    const options = {
+        method: 'GET',
+        headers: {
+        'X-RapidAPI-Key': 'abc0508769mshb8592cf98146751p191b6fjsnb4a1946ba880',
+        'X-RapidAPI-Host': 'googles-bert-sentiment-analysis.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+
+        // Display the result on the page
+        document.getElementById('result').innerHTML = `<p>Sentiment Analysis Result: ${result}</p>`;
+    } catch (error) {
+        console.error(error);
+    }
+    });
+</script>
+
+</body>
+</html>

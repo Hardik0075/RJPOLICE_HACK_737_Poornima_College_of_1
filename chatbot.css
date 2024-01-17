@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#chatbox {
+    max-width: 100%;
+    width: 500px; /* Adjust the width as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#header {
+    background-color: #e6ccff;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+#messages {
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 300px; /* Adjust the max height as needed */
+}
+
+.message-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.userMessage {
+    background-color: #e6ccff;
+    color: black;
+    border-radius: 5px;
+    margin-right: auto;
+    max-width: 70%;
+    position: relative;
+}
+
+.userMessage::before {
+    content: '\1F464'; /* Unicode for robot icon */
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.botMessage {
+    background-color: #ddd;
+    color: black;
+    border-radius: 5px;
+    margin-left: auto;
+    max-width: 70%;
+    position: relative;
+}
+
+.botMessage::before {
+    content: '\1F609'; /* Unicode for wink face icon */
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#userInput {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#userMessage {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#options {
+    margin-right: 10px;
+    border: #e6ccff ;
+}
+
+#sendButton {
+    padding: 8px;
+    background-color: #e6ccff;
+    color: rgb(248, 47, 248);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

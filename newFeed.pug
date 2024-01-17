@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Feed Page
+    link(rel='stylesheet', href='./App.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+
+  body
+    header.App-header
+      div
+        img(src='logo.png', alt='Company Logo')
+        a.logoName(href='/') Vichar-yakt
+      a.help_header(href='/chatbot') Help
+      a(href='/') Home
+
+    div.feed-page
+      div.h2heading
+        h2 Feed Page
+      div.feed-container
+        each item, index in items
+            
+            if index % 3 === 0
+                br
+            div.card
+                h3= item.name
+                p= item.city
+                p= item.thana
+                p= item.issue
+                p Rating: 
+                    - const ratingNumber = parseInt(item.rating, 10)
+                        each _ in Array(ratingNumber)
+                            i.fas.fa-star
+                p= item.feedback

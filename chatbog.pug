@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Feedback System Chatbot</title>
+    link(rel="stylesheet", href="./chatbot.css")
+</head>
+<body>
+
+    <div id="chatbox">
+        <div id="header">Police Feedback System Chatbot</div>
+        <div id="messages">
+            <div class="message-container">
+                <div class="message botMessage">Hello! How can I help you today?</div>
+            </div>
+        </div>
+        <div id="userInput">
+            <input type="text" id="userMessage" placeholder="Type a message...">
+            <select id="options">
+                <option value="">Select an option</option>
+                <option value="submitFeedback">How to submit feedback?</option>
+                <option value="viewFeedback">How to view feedback?</option>
+                <option value="appUsage">How to use the app?</option>
+            </select>
+            <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    script(src="./chatbot.js") 
+
+</body>
+</html>
